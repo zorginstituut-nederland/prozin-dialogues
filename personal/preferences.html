@@ -1,0 +1,42 @@
+---
+layout: prozin/generic
+title: Login
+page_type: login
+---
+
+<div 
+	id="main-content">
+    <div 
+    	class="pat-rich">
+        <h1>
+            {{ site.data.prozin.ui.label_preferences[site.lang] }}
+        </h1>
+    </div>
+
+    <form
+    	action="/"
+    	class="pat-inject pat-form">
+    	<fieldset 
+    		class="horizontal form-panel">
+			{% include patterns/form.html 
+				src="preferences" 
+				layout="horizontal" 
+				root="field" 
+				action="/feedback/" 
+				submit="auto" 
+				inject="" %}
+			{% if site.data.newsletters %}
+				{% include prozin/newsletters-checklist.html %}
+			{% endif %}
+			<div 
+				class="button-bar">
+				<button
+					class="default pat-button"
+					type="submit">Bewaar</button>
+				<button
+					class="pat-button"
+					type="button">Annuleer</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
