@@ -1,0 +1,16 @@
+---
+---
+[
+    {
+      "text": "Avi Asscher",
+      "email": "avi@asscher.amsterdam"
+    }
+	{% for item in site.data.personae %}
+			{% assign this_persona = item[1] %}
+			,
+			{
+		      "text": "{{ this_persona.first_name }} {{ this_persona.last_name }}",
+		      "email": "{{ this_persona.email }}"
+		    }	
+	{% endfor %}
+]
