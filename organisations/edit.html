@@ -48,7 +48,7 @@ organisation: Mees & mcRooy Makelaars
 		Users
 		<input 
 			class="pat-autosuggest users"
-			data-pat-autosuggest="ajax-data-type: json; allow-new-words: false; ajax-search-index: text; ajax-url: /dialogues/organisations/users.json; prefill-json: ;"
+			data-pat-autosuggest="words: {% for item in site.data.personae %}{% assign this_persona = item[1] %}{{ this_persona.first_name }} {{ this_persona.last_name }} &lt;{{ this_persona.email }}&gt;{% if forloop.last %}{% else %},{% endif %}{% endfor %}; allow-new-words: false"
 			type="text" 
 			placeholder="Selecteer gebruikers" 
 			name="users">
