@@ -10,16 +10,51 @@ buttons:
   - label: label_cancel
     type: button
     class: 'close-panel icon-cancel-circle'
-panel_class: small panel
+panel_class: medium panel
+organisation: Mees & mcRooy Makelaars
 ---
 
+<!-- <article 
+	class="pat-rich">
+	<h1>
+		{{ page.organisation }}
+	</h1>
+</article> -->
 <fieldset 
-	class="form-panel vertical">
+	class="form-panel horizontal">
 	<label>
 		Name
 		<input 
+			value="{{ page.organisation }}" 
 			autofocus="autofocus" 
 			type="text" 
 			name="name">
+	</label>
+	<label>
+		Administrator
+		<select>
+			<option>
+				{{ site.data.prozin.ui.label_administrator_not_selected[site.lang] }}
+			</option>
+			{% for item in site.data.personae %}
+				{% assign this_persona = item[1] %}
+				<option>
+					{{ this_persona.first_name }} {{ this_persona.last_name }} &lt;{{ this_persona.email }}&gt;
+				</option>
+			{% endfor %}
+		</select>
+	</label>
+	<label>
+		Users
+		<select
+			class="pat-auto-suggest"
+			multi>
+			{% for item in site.data.personae %}
+				{% assign this_persona = item[1] %}
+				<option>
+					{{ this_persona.first_name }} {{ this_persona.last_name }} &lt;{{ this_persona.email }}&gt;
+				</option>
+			{% endfor %}
+		</select>
 	</label>
 </fieldset>
