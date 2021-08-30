@@ -1,0 +1,25 @@
+---
+layout: prozin/modal
+title: label_edit
+action: /beheer/organisations#organisations
+inject: ''
+buttons:
+  - label: label_save
+    type: submit
+    class: 'default icon-ok-circle close-panel'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: small panel
+---
+
+<fieldset 
+	class="form-panel vertical">
+	<label>
+		Name
+		<input 
+			autofocus="autofocus" 
+			type="text" 
+			name="name">
+	</label>
+</fieldset>
