@@ -1,0 +1,25 @@
+---
+layout: prozin/modal
+title: label_delete_user
+action: /dialogues/users#users
+inject: ''
+buttons:
+  - label: label_i_am_sure_delete_now
+    type: submit
+    class: 'default icon-ok-circle close-panel'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: small panel
+organisation: Mees & mcRooy Makelaars
+---
+
+<article 
+    class="pat-rich">
+    <p>
+        U staat op het punt om de gebruiker '<strong>Nikos Papadopoulus</strong>' te verwijderen. Deze handeling is onomkeerbaar. 
+    </p>
+    <p>
+        {{ site.data.prozin.ui.message_are_you_sure[site.lang] }}
+    </p>
+</article>

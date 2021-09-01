@@ -1,7 +1,7 @@
 ---
 layout: prozin/modal
-title: label_edit
-action: /dialogues/organisations#organisations
+title: label_new_user
+action: /dialogues/users#users
 inject: ''
 buttons:
   - label: label_save
@@ -14,4 +14,5 @@ panel_class: medium panel
 organisation: Mees & mcRooy Makelaars
 ---
 
-{% include prozin/organisations-edit-form.html %}
+{% include prozin/user-edit-form.html
+    role="Owner" %}
