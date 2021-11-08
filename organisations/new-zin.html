@@ -1,0 +1,17 @@
+---
+layout: prozin/modal
+title: label_new_organisation
+action: /dialogues/organisations#organisations
+inject: ''
+buttons:
+  - label: label_save
+    type: submit
+    class: 'default icon-ok-circle close-panel'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: medium panel
+organisation_type: Beheerorganisatie
+---
+
+{% include prozin/organisations-edit-form.html %}
