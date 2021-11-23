@@ -1,0 +1,26 @@
+---
+layout: prozin/generic
+---
+
+<form 
+	action="/feedback/avatar-upload.html#avatar-upload">
+	<label 
+		class="three columns image-uploader" 
+		id="avatar-upload">
+	    <img 
+	    	src="/media/users/cornelis-g-a-kolbach.jpg" alt="" />
+		    <span 
+		    	class="pat-button upload-button">Vervang foto</span>
+			<input 
+				type="file" 
+				name="hero"
+				accept="image" /> 
+
+		<button 
+			type="submit" 
+			class="icon-trash image-upload-remove-button" 
+			name="image-uploader-remove" 
+			formaction="/dialogues/personal/avatar-upload.html#avatar-upload"
+			title="Verwijder deze afbeelding">Verwijder</button>
+	</label>
+</form>
