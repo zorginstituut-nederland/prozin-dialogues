@@ -4,7 +4,7 @@
   {% for item in site.data.organisations %}
       {% unless forloop.first %},{% endunless %}
       {
-          "text": "{{ item.name }}",
+          "text": "{{ item.name }} ({{ item.type }})",
           "id": "{{ item.name | slugify }}"
         } 
   {% endfor %}
