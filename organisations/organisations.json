@@ -1,0 +1,11 @@
+---
+---
+[
+  {% for item in site.data.organisations %}
+      {% unless forloop.first %},{% endunless %}
+      {
+          "text": "{{ item.name }}",
+          "id": "{{ item.name | slugify }}"
+        } 
+  {% endfor %}
+]
