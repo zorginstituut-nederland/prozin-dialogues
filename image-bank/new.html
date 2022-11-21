@@ -1,0 +1,28 @@
+---
+layout: prozin/modal
+title: label_publish
+action: /dialogues/image-bank/#listing
+inject: ''
+buttons:
+  - label: label_save
+    type: submit
+    class: 'default icon-ok-circle close-panel'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: medium panel
+---
+
+<fieldset 
+	class="form-panel horizontal">
+	<label>
+		{% include patterns/i18n 
+			id="patterns.label_title" %}
+		<input
+			class="pat-autofocus"
+			required 
+			type="text" 
+			name="">
+	</label>
+	{% include prozin/form-fields-image.html %}
+</fieldset>
