@@ -1,0 +1,39 @@
+---
+layout: prozin/modal
+title: label_internal_link
+panel_style: panel
+panel_size: medium
+buttons:
+  - label: label_insert_imp
+    type: submit
+    class: 'tiptap-confirm default close-panel icon-ok-circle'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+---
+
+<form
+    class="pat-form">
+	<fieldset 
+		class="vertical">
+		<label>	
+			{% include patterns/i18n id="label_page" %}
+			<input
+				type="url" 
+				name="external"
+				placeholder="Typ of plak een URL" />
+		</label>
+      	<label>
+          {% include patterns/i18n id="label_link_text" %}
+          <input
+              type="text"
+              name="tiptap-text">
+      	</label>
+      	<label>
+        	<textarea
+            	name="description"
+            	placeholder="{% include patterns/i18n id="label_description_link_text" %}"
+            	rows="6"></textarea>
+	    </label>
+	</fieldset>
+</form>
