@@ -1,0 +1,13 @@
+---
+---
+[
+	{% for item in site.editorial %}
+		{% if item.layout == 'prozin/article' %}
+			{% unless forloop.first %},{% endunless %}
+			{
+		      "text": "{{ item.url }}",
+		      "id": "{{ item.title | slugify }}"
+		    }	
+		{% endif %}
+	{% endfor %}
+]

@@ -1,0 +1,31 @@
+---
+layout: prozin/modal
+title: label_hyperlink
+buttons:
+  - label: label_ok
+    type: submit
+    class: 'default icon-ok-circle'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_style: panel
+panel_size: large
+---
+
+<form
+	class="pat-form">
+	<fieldset 
+		class="vertical">
+		Interne koppeling
+		<input
+			class="pat-autosuggest" 
+			type="text" 
+			name=""
+			placeholder="Zoek en selecteer een pagina op deze site"
+			data-pat-autosuggest="
+				allow-new-words: false; 
+	            maximum-selection-size: 1; 
+				ajax-search-index: text; 
+				ajax-url: /dialogues/cms/internal-links.json;" />
+	</fieldset>
+</form>
