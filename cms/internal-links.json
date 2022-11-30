@@ -1,12 +1,27 @@
 ---
 ---
+
+{% assign initial = false %}
+
 [
+
+	{% for item in site.news %}
+		{% if item.layout == 'prozin/news-item' %}
+			{% unless initial == false %},{% endunless %}
+			{
+		      "text": "Nieuws > {{ item.title }}",
+		      "id": "{{ item.url }}"
+		    }	
+		    {% assign initial = true %}
+		{% endif %}
+	{% endfor %}
+
 	{% for item in site.editorial %}
 		{% if item.layout == 'prozin/article' %}
-			{% unless forloop.first %},{% endunless %}
+			,
 			{
-		      "text": "{{ item.url }}",
-		      "id": "{{ item.title | slugify }}"
+		      "text": "Redactioneel > {{ item.title }}",
+		      "id": "{{ item.url }}"
 		    }	
 		{% endif %}
 	{% endfor %}

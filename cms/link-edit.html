@@ -15,26 +15,78 @@ panel_class: panel-hyperlink
 
 <form
     class="pat-form">
-	<fieldset 
-		class="vertical">
-		<label>	
-			{% include patterns/i18n id="label_page" %}
-			<input
-				class="pat-autosuggest pat-autofocus" 
-				type="url" 
-				name="tiptap-href"
-				placeholder="Zoek en selecteer een pagina op deze site"
-				data-pat-autosuggest="
-					allow-new-words: false; 
-		            maximum-selection-size: 1; 
-					ajax-search-index: text; 
-					ajax-url: /dialogues/cms/internal-links.json;" />
-		</label>
-        <label>
-            {% include patterns/i18n id="label_link_text" %}
-            <input
-                type="text"
-                name="tiptap-text">
-        </label>
-	</fieldset>
+
+    <div 
+    	class="pat-toolbar"
+    	id="link-panel-toolbar">
+	    <div 
+	        class="toolbar-navigation-area">
+	        <div 
+	            class="toolbar-section navigation"
+	            id="link-panel-toolbar-navigation">
+	            <nav 
+	                class="pat-tabs pat-button-cluster">
+	                <a 
+	                	class="current" 
+	                    href="#sheet-internal">{% include patterns/i18n id="patterns.label_internal_link" %}</a>
+	                <a 
+	                    href="#sheet-external">{% include patterns/i18n id="patterns.label_external_link" %}</a>
+	            </nav>
+	        </div>
+	    </div>
+	</div>
+
+	<div 	
+		class="panel-sheets pat-stacks schwung">
+
+		<div
+			id="#sheet-internal" 
+			class="stack sheet-content">
+			<fieldset 
+				class="vertical">
+				<label>	
+					{% include patterns/i18n id="label_page" %}
+					<input
+						class="pat-autosuggest pat-autofocus" 
+						type="url" 
+						name="tiptap-href"
+						placeholder="Zoek en selecteer een pagina op deze site"
+						data-pat-autosuggest="
+							allow-new-words: false; 
+				            maximum-selection-size: 1; 
+							ajax-search-index: text; 
+							ajax-url: /dialogues/cms/internal-links.json;" />
+				</label>
+		        <label>
+		            {% include patterns/i18n id="label_link_text" %}
+		            <input
+		                type="text"
+		                name="tiptap-text">
+		        </label>
+			</fieldset>
+		</div>
+
+		<div
+			id="#sheet-external" 
+			class="stack sheet-content">
+			<fieldset 
+				class="vertical">
+				<label>	
+					{% include patterns/i18n id="label_page" %}
+					<input
+						class="pat-autofocus" 
+						type="url" 
+						name="tiptap-href"
+						placeholder="Typ of plak een externe URL" />
+				</label>
+		        <label>
+		            {% include patterns/i18n id="label_link_text" %}
+		            <input
+		                type="text"
+		                name="tiptap-text">
+		        </label>
+			</fieldset>
+		</div>
+	</div>
+
 </form>
