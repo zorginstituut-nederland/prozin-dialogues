@@ -1,40 +1,52 @@
 ---
 layout: prozin/modal
-title: label_internal_link
-panel_style: panel
-panel_size: medium
+title: label_hyperlink
 buttons:
-  - label: label_insert_imp
+  - label: label_insert
     type: submit
     class: 'tiptap-confirm default close-panel icon-ok-circle'
   - label: label_cancel
     type: button
     class: 'close-panel icon-cancel-circle'
+panel_class: panel medium hyperlink
 ---
 
-<form
-    class="pat-form">
-	<fieldset 
-		class="vertical">
-		<label>	
-			{% include patterns/i18n id="label_page" %}
-			<input
-				class="pat-autofocus"
-				type="url" 
-				name="external"
-				placeholder="Typ of plak een URL" />
-		</label>
-      	<label>
-          {% include patterns/i18n id="label_link_text" %}
-          <input
-              type="text"
-              name="tiptap-text">
-      	</label>
-      	<label>
-        	<textarea
-            	name="description"
-            	placeholder="{% include patterns/i18n id="label_description_link_text" %}"
-            	rows="6"></textarea>
-	    </label>
-	</fieldset>
-</form>
+{% include prozin/toolbar-link-panel.html %}
+
+<div
+    id="link-panel-content" 
+    class="link-panel-content">
+    <form
+        id=""
+        class="pat-form">
+
+        <fieldset 
+            class="vertical">
+            <label
+            	id="link-panel-url-field">
+            	{% include patterns/i18n id="patterns.label_url" %}
+				<input
+					class="pat-autofocus" 
+					type="url" 
+					name="tiptap-href"
+					placeholder="Typ of plak een externe URL" />
+            </label>
+            <label>
+                {% include patterns/i18n id="label_link_text" %}
+                <input
+                    type="text"
+                    name="tiptap-text">
+            </label>
+            {% comment %}
+                <label
+                    class="pat-checklist">
+                    Open in new window
+                    <input
+                        type="checkbox"
+                        name="tiptap-target"
+                        value="_blank">
+                </label>
+            {% endcomment %}
+        </fieldset>
+    </form>    
+</div>

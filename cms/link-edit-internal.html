@@ -1,39 +1,43 @@
 ---
 layout: prozin/modal
-title: label_internal_link
-panel_style: panel
-panel_size: medium
+title: label_hyperlink
 buttons:
-  - label: label_insert_imp
+  - label: label_insert
     type: submit
     class: 'tiptap-confirm default close-panel icon-ok-circle'
   - label: label_cancel
     type: button
     class: 'close-panel icon-cancel-circle'
+panel_class: panel medium hyperlink
 ---
 
-<form
-    class="pat-form">
-	<fieldset 
-		class="vertical">
-		<label>	
-			{% include patterns/i18n id="label_page" %}
-			<input
-				class="pat-autosuggest" 
-				type="text" 
-				name="internal"
-				placeholder="Zoek en selecteer een pagina op deze site"
-				data-pat-autosuggest="
-					allow-new-words: false; 
-		            maximum-selection-size: 1; 
-					ajax-search-index: text; 
-					ajax-url: /dialogues/cms/internal-links.json;" />
-		</label>
-        <label>
-            {% include patterns/i18n id="label_link_text" %}
-            <input
-                type="text"
-                name="tiptap-text">
-        </label>
-	</fieldset>
-</form>
+{% include prozin/toolbar-link-panel.html %}
+
+<div
+    id="link-panel-content" 
+    class="link-panel-content">
+    <form
+        class="pat-form">
+        <fieldset 
+            class="vertical">
+            {% include prozin/form-field-page-selector.html
+            	id="link-panel-url-field" %}
+            <label>
+                {% include patterns/i18n id="label_link_text" %}
+                <input
+                    type="text"
+                    name="tiptap-text">
+            </label>
+            {% comment %}
+                <label
+                    class="pat-checklist">
+                    Open in new window
+                    <input
+                        type="checkbox"
+                        name="tiptap-target"
+                        value="_blank">
+                </label>
+            {% endcomment %}
+        </fieldset>
+    </form>
+</div>
