@@ -1,0 +1,39 @@
+---
+layout: prozin/modal
+title: label_remove_this_language
+application: news
+application_name: news
+panel_instance: panel-add-language
+panel_style: panel
+panel_size: small
+---
+
+<form
+    class="pat-form pat-validate pat-inject"
+    action="/quality-registrations/standaarden/Anogenitale-lichen-sclerosus--Federatie#content"
+    id="sheet-user-group">
+    <div class="pat-rich">
+        <p>
+            {% include patterns/i18n id="message_remove_a_language" %}
+        </p>
+        <ul>
+            <li>{% include patterns/i18n id="patterns.label_dutch" %}</li>
+        </ul>
+        <p>
+            {% include patterns/i18n id="message_are_you_sure" %}
+        </p>
+    </div>
+    <div
+        class="button-bar">
+        <button
+            type="submit"
+            class="pat-button default icon-ok-circle close-panel">
+            {% include patterns/i18n id="patterns.label_remove" %}
+        </button>
+        <button
+            type="button"
+            class="pat-button icon-cancel-circle close-panel validate-ignore">
+            {% include patterns/i18n id="patterns.label_cancel" %}
+        </button>
+    </div>
+</form>

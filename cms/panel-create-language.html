@@ -1,0 +1,39 @@
+---
+layout: prozin/modal
+title: label_add_language
+application: news
+application_name: news
+panel_instance: panel-add-language
+panel_style: panel
+panel_size: small
+---
+
+<form
+    class="pat-form pat-validate pat-inject"
+    action="/quality-registrations/standaarden/Anogenitale-lichen-sclerosus--Federatie-edit#content"
+    id="sheet-user-group">
+    <fieldset
+        class="vertical">
+        <label>
+            Language
+            <select>
+                {% for item in site.data.prozin.languages %}
+                    <option>{{ item[1].name }}</option>
+                {% endfor %}
+            </select>
+        </label>
+    </fieldset>
+    <fieldset
+        class="group button-bar">
+        <button
+            type="submit"
+            class="pat-button default icon-ok-circle close-panel">
+            Add
+        </button>
+        <button
+            type="button"
+            class="pat-button icon-cancel-circle close-panel validate-ignore">
+            Cancel
+        </button>
+    </fieldset>
+</form>
