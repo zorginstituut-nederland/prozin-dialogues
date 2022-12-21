@@ -23,9 +23,14 @@ panel_size: small
         <label>
             Documenttype
             <select>
-                {% for item in site.data.prozin.document-types %}
-                    <option>{{ item.name }}</option>
-                {% endfor %}
+                <option>Aanbiedingsbrief</option>
+                <option>Indicatoren</option>
+                <optgroup
+                    label="Standaardtypen"></optgroup>
+                    {% for item in site.data.prozin.document-types %}
+                        <option>{{ item.name }}</option>
+                    {% endfor %}
+                </optgroup>
             </select>
         </label>
         <label>
