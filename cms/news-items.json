@@ -1,0 +1,17 @@
+---
+---
+
+{% assign products_alpha = site.news | sort: 'title' %}
+{% assign first = true %}
+
+[
+	{% for item in products_alpha %}
+        {% if item.layout == "prozin/news-item" %}
+        	{% unless first %},{% endunless %}{% assign first = false %}
+			{
+		      "text": "{{ item.title }}",
+		      "id": "{{ item.title | slugify }}"
+		    }	
+		{% endif %}
+	{% endfor %}
+]

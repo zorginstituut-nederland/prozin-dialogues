@@ -1,0 +1,51 @@
+---
+layout: prozin/modal
+title: label_external_link
+action: /quality-registrations/standaarden/Anogenitale-lichen-sclerosus--Federatie-edit#external-links
+inject: "source: #external-links; target: #external-links::after"
+buttons:
+  - label: label_save
+    type: submit
+    class: 'tiptap-confirm default close-panel icon-ok-circle'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: panel medium hyperlink
+---
+
+<fieldset 
+    class="vertical">
+    <label
+    	id="link-panel-url-field">
+    	{% include patterns/i18n id="patterns.label_url" %}
+		<input
+			class="pat-autofocus" 
+			type="url" 
+			name="url"
+			placeholder="Typ of plak een externe URL" />
+    </label>
+    <label>
+        {% include patterns/i18n id="patterns.label_title" %}
+        <input
+            type="text"
+            name="title">
+    </label>
+    <label>
+        {% include patterns/i18n id="label_description" %}
+        <textarea
+            rows="3"
+            name="description"></textarea>
+    </label>
+    {% comment %}
+        <label
+            class="pat-checklist">
+            Open in new window
+            <input
+                type="checkbox"
+                name="tiptap-target"
+                value="_blank">
+        </label>
+    {% endcomment %}
+</fieldset>
+   
+
