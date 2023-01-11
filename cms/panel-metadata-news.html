@@ -1,0 +1,41 @@
+---
+layout: prozin/modal
+title: label_metadata
+action: /quality-registrations/standaarden/Anogenitale-lichen-sclerosus--Federatie-edit#button-metadata
+inject: "source: #button-metadata; target: #button-metadata"
+buttons:
+  - label: label_save
+    type: submit
+    class: 'default close-panel icon-ok-circle'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: panel medium hyperlink
+---
+
+<fieldset 
+    class="horizontal metadata">
+    {% include prozin/cms-standard-metadata.html %}
+    <label>
+        {% include patterns/i18n id="label_source" %}
+        <input 
+            type="text" 
+            name="">
+    </label>
+    <fieldset 
+        class="pat-checklist">
+        <legend>{% include patterns/i18n id="label_promotion" %}</legend>
+        <label>
+            {% include patterns/i18n id="label_pin_on_top_of_overviews" %}
+            <input 
+                type="checkbox" 
+                name="">
+        </label>
+        <label>
+            {% include patterns/i18n id="label_include_in_periodical" %}
+            <input 
+                type="checkbox" 
+                name="">
+        </label>
+    </fieldset>
+</fieldset>
