@@ -6,7 +6,7 @@
 
 [
 	{% for item in products_alpha %}
-        {% if item.layout == "prozin/article" %}
+        {% if item.layout == "prozin/general-article" %}
         	{% unless first %},{% endunless %}{% assign first = false %}
 			{
 		      "text": "{{ item.title }}",
