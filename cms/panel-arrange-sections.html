@@ -11,9 +11,122 @@ buttons:
     type: button
     class: 'close-panel icon-cancel-circle'
 panel_class: panel medium add-section
+sections:
+  - name: Advies
+    type: rich
+    content: "Het advies geeft een oordeel over de plaats van het geneesmiddel in de farmacotherapie ten opzichte van andere geneesmiddelen of interventies. Bij het opstellen van deze adviezen is de Wetenschappelijke Adviesraad (WAR) van Zorginstituut Nederland betrokken.
+
+<h3>Tussenkopje</h3>
+
+U vindt ‘Advies’ in de geneesmiddelteksten. Een uitgebreide argumentatie over de plaats van het geneesmiddel is te lezen in de rubriek ‘Aanwijzingen voor het maken van een keuze’ die in de achtergrondinformatie van het betreffende hoofdstuk staat en bij veel nieuwe geneesmiddelen in de FR-rapporten.
+
+<h2>Beoordelingsprocedure</h2>
+
+Op een uniforme en systematische wijze vindt de beoordeling van geneesmiddelen plaats. Deze beoordelingsprocedure en de daarbij gehanteerde criteria staan beschreven in Criteria voor beoordeling therapeutische waarde."
+  - name: Beoordelingsprocedure
+    type: rich
+  - name: Besluit zorgverzekering en Regeling zorgverzekering
+    type: rich
+  - name: Bijlage 1 (van de Regeling zorgverzekering)
+    type: rich
+  - name: Bijlage 2 (van de Regeling zorgverzekering)
+    type: rich
+  - name: Bijwerkingen
+    type: rich
+  - name: Contra-indicaties
+    type: rich
+  - name: Dosering
+    type: rich
+  - name: Eigen bijdrage
+    type: rich
+  - name: Eigen risico
+    type: rich
+  - name: Eigenschappen
+    type: rich
+  - name: Ervaring met het gebruik
+    type: rich
+  - name: Fabrikant van geneesmiddel
+    type: rich
+  - name: Farmaco-economie
+    type: rich
+  - name: Farmacogenetica
+    type: rich
+  - name: Farmacokinetiek
+    type: rich
+  - name: Farmacotherapeutische groep
+    type: rich
+  - name: Geneesmiddelbeschrijving
+    type: rich
+  - name: Geneesmiddelvergoedingssysteem (GVS)
+    type: rich
+  - name: Indicaties
+    type: rich
+  - name: Interacties
+    type: rich
+  - name: Kinderen
+    type: rich
+  - name: Literatuur
+    type: rich
+  - name: Officiële productinformatie CBG/EMA
+    type: rich
+  - name: Opiumwetmiddelen
+    type: rich
+  - name: Ouderen
+    type: rich
+  - name: Overdosering
+    type: rich
+  - name: Overgevoeligheid
+    type: rich
+  - name: Rationele farmacotherapie
+    type: rich
+  - name: Rijvaardigheid
+    type: rich
+  - name: Samenstelling
+    type: rich
+  - name: Standaarddosis
+    type: rich
+  - name: Stofnaam
+    type: rich
+  - name: Symbolen
+    type: rich
+  - name: Vergoeding van geneesmiddel
+    type: rich
+  - name: Weesgeneesmiddelen
+    type: rich
+  - name: Wetenschappelijke Adviesraad
+    type: rich
+  - name: Zwangerschap/Lactatie
+    type: rich
+  - name: Bijlagen
+    type: downloads
 ---
 
 <fieldset 
     class="horizontal">
-    
+    <ol 
+        class="sortable-list pat-sortable"
+        data-pat-sortable="selector: .sortable-item">
+        {% for section in page.sections %}
+            <li
+                class="sortable-item">
+                <p 
+                    class="label">
+                    {{ section.name }}
+                </p>
+                <p 
+                    class="button-cluster">
+                    <button 
+                        class="sortable-button-up small pat-button" 
+                        type="submit" 
+                        name="up" 
+                        value="up">Up</button>
+                    <button 
+                        class="sortable-button-down small pat-button" 
+                        type="submit" 
+                        name="item_1_down" 
+                        value="item_1_down">down</button>
+                </p>
+            </li>
+        {% endfor %}    
+    </ol>
 </fieldset>
