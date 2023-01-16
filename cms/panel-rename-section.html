@@ -1,10 +1,10 @@
 ---
 layout: prozin/modal
-title: label_add_section
+title: label_edit_header
 action: '/editorial/begrippenlijst-edit'
-inject: '#main-content'
+inject: '#begrippenlijst-advies-title-segment'
 buttons:
-  - label: label_insert_imp
+  - label: label_save
     type: submit
     class: 'default close-panel icon-ok-circle'
   - label: label_cancel
@@ -19,20 +19,9 @@ panel_class: panel medium add-section
         {% include patterns/i18n id="label_section_name" %}
         <input 
             type="text"
+            value="Advies"
             class="pat-autofocus" 
             name="">
-    </label>
-    <label>
-        {% include patterns/i18n id="label_type" %}
-        <select>
-            <option>Tekst met opmaak</option>
-            <option>Afbeelding</option>
-            <option>Video</option>
-            <option>Presentatie</option>
-            <option>Externe inhoud</option>
-            <option>Betrokken partijen</option>
-
-        </select>
     </label>
     <fieldset class="pat-checklist">
         <label>
@@ -44,9 +33,3 @@ panel_class: panel medium add-section
         </label>
     </fieldset>
 </fieldset>
-
-<!-- <p 
-    class="pat-message notice">
-    Bij het toevoegen van een sectie worden alle wijzigingen op deze pagina tussentijds opgeslagen. 
-</p> -->
-
