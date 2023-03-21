@@ -1,7 +1,7 @@
 ---
 ---
 
-{% assign products_alpha = site.editorial | sort: 'title' %}
+{% assign products_alpha = site.general | sort: 'title' %}
 {% assign first = true %}
 
 [
