@@ -1,0 +1,23 @@
+---
+layout: prozin/modal
+title: label_steal_lock
+inject: ' '
+action: /medicine-example-edit
+buttons:
+  - label: label_steal_lock_confirmative
+    type: submit
+    class: 'close-panel default icon-ok-circle'
+  - label: label_cancel_imp
+    type: button
+    class: 'close-panel icon-cancel-circle'
+---
+
+<article 
+	class="pat-rich">
+	<p>
+		{% include patterns/i18n id="message_steal_lock" %}
+	</p>
+	<p>
+		{% include patterns/i18n id="message_are_you_sure" %}
+	</p>
+</article>
