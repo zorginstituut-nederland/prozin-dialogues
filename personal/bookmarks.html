@@ -8,12 +8,7 @@ page_type: bookmarks
     icon="bookmark" %}
 
 <div 
-	class="page-module type-links">
-	<h2 
-		class="page-module-group-title">
-			
-	</h2>	
-    
+	class="page-module type-links">    
     {% capture this_url %}/{{ section }}{% endcapture %}
     {% capture this_label %}label_{{ section | replace: '-','_' }}{% endcapture %}
     {% include prozin/bookmarked-list.html 
