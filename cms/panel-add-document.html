@@ -5,7 +5,7 @@ application: news
 application_name: news
 panel_instance: panel-add-language
 panel_style: panel
-panel_size: small
+panel_size: medium
 ---
 
 <form
@@ -14,13 +14,17 @@ panel_size: small
     action="/quality-registrations/standaarden/Anogenitale-lichen-sclerosus--Federatie-edit-attachment#downloads-bijlagen"
     id="sheet-remove-language">
     <fieldset 
-        class="vertical">
-        <label>
-            Bestand
+        class="horizontal">
+        <fieldset
+            class="group">
+            <legend>{% include patterns/i18n id="label_file" %}</legend>
             <input 
+                required 
                 type="file" 
                 name="">
-        </label>
+            {% include patterns/form-help.html
+                content="message_help_file_upload" %}
+        </fieldset>
         <label>
             Documenttype
             <select>
@@ -38,6 +42,7 @@ panel_size: small
         <label>
             Titel
             <input 
+                required 
                 type="text" 
                 name="">
         </label>
