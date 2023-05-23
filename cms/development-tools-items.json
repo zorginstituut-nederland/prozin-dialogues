@@ -1,17 +1,21 @@
 ---
 ---
 
-{% assign products_alpha = site.development-tools | sort: 'title' %}
-{% assign first = true %}
+{% if site.development-tools %}
 
-[
-	{% for item in products_alpha %}
-        {% if item.layout == "tool" %}
-        	{% unless first %},{% endunless %}{% assign first = false %}
-			{
-		      "text": "{{ item.title }}",
-		      "id": "{{ item.title | slugify }}"
-		    }	
-		{% endif %}
-	{% endfor %}
-]
+	{% assign products_alpha = site.development-tools | sort: 'title' %}
+	{% assign first = true %}
+
+	[
+		{% for item in products_alpha %}
+	        {% if item.layout == "tool" %}
+	        	{% unless first %},{% endunless %}{% assign first = false %}
+				{
+			      "text": "{{ item.title }}",
+			      "id": "{{ item.title | slugify }}"
+			    }	
+			{% endif %}
+		{% endfor %}
+	]
+
+{% endif %}
