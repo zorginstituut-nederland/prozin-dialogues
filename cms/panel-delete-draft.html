@@ -1,0 +1,38 @@
+---
+layout: prozin/modal
+title: label_delete_draft
+application: news
+application_name: news
+panel_instance: panel-add-language
+panel_style: panel
+panel_size: small
+---
+
+<form
+    class="pat-form pat-validate pat-inject"
+    action="/concepten"
+    data-pat-inject="scroll: #main; history: record"
+    id="sheet-remove-language">
+    <div 
+        class="pat-rich">
+        <p>
+            {% include patterns/i18n id="message_delete_draft" %}
+        </p>
+        <p>
+            {% include patterns/i18n id="message_are_you_sure" %}
+        </p>
+    </div>
+    <div
+        class="button-bar">
+        <button
+            type="submit"
+            class="pat-button default icon-ok-circle close-panel">
+            {% include patterns/i18n id="patterns.label_delete_imp" %}
+        </button>
+        <button
+            type="button"
+            class="pat-button icon-cancel-circle close-panel validate-ignore">
+            {% include patterns/i18n id="patterns.label_cancel_imp" %}
+        </button>
+    </div>
+</form>
