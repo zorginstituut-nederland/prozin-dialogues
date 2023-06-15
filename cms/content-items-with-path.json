@@ -1,0 +1,19 @@
+---
+---
+
+{% assign news = site.general | sort: 'title' %}
+{% assign general = site.general | sort: 'title' %}
+
+{% assign first = true %}
+
+[
+	{% for item in general %}
+        {% if item.layout == "prozin/general-article" %}
+        	{% unless first %},{% endunless %}{% assign first = false %}
+			{
+		      "text": "{% include patterns/i18n id="label_news" %} > {{ item.title }}",
+		      "id": "{{ item.title | slugify }}"
+		    }	
+		{% endif %}
+	{% endfor %}
+]
