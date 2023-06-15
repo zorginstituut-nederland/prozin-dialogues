@@ -1,7 +1,7 @@
 ---
 ---
 
-{% assign news = site.general | sort: 'title' %}
+{% assign news = site.news | sort: 'title' %}
 {% assign general = site.general | sort: 'title' %}
 
 {% assign first = true %}
@@ -9,6 +9,15 @@
 [
 	{% for item in general %}
         {% if item.layout == "prozin/general-article" %}
+        	{% unless first %},{% endunless %}{% assign first = false %}
+			{
+		      "text": "{% include patterns/i18n id="label_general" %} > {{ item.title }}",
+		      "id": "{{ item.title | slugify }}"
+		    }	
+		{% endif %}
+	{% endfor %}
+	{% for item in news %}
+        {% if item.layout == "prozin/news-item" %}
         	{% unless first %},{% endunless %}{% assign first = false %}
 			{
 		      "text": "{% include patterns/i18n id="label_news" %} > {{ item.title }}",
