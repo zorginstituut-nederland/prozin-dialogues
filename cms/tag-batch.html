@@ -7,7 +7,7 @@ panel_style: panel
 panel_size: medium
 panel_instance: batch-tagging
 buttons:
-  - label: label_i_am_sure_publish_now
+  - label: label_tag_imp
     type: submit
     class: 'default icon-ok-circle close-panel'
   - label: label_cancel_imp
@@ -18,9 +18,11 @@ buttons:
 <article
 	class="pat-rich">
 	<p>
-		{% include patterns/i18n id="message_workflow_transition_publish_batch" %}
+		{% include patterns/i18n id="message_tag_batch" %}
 	</p>
-  <p>
-    {% include patterns/i18n id="message_are_you_sure" %}
-  </p>
 </article>
+
+<fieldset
+    class="vertical">
+    {% include prozin/form-field-tags.html %}
+</fieldset>
