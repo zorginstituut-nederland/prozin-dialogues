@@ -1,0 +1,22 @@
+---
+layout: prozin/modal
+title: label_publish_imp
+action: /dialogues/cms/news
+inject: ''
+panel_style: panel
+panel_size: medium
+buttons:
+  - label: label_i_am_sure_publish_now
+    type: submit
+    class: 'default icon-ok-circle'
+  - label: label_cancel_imp
+    type: button
+    class: 'close-panel icon-cancel-circle'
+---
+
+<article
+	class="pat-rich">
+	<p>
+		{% include patterns/i18n id="message_workflow_transition_publish_batch" %}
+	</p>
+</article>
