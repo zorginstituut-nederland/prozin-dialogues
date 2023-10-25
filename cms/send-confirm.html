@@ -1,0 +1,44 @@
+---
+layout: prozin/modal
+title: label_send_news_flash
+action: /dialogues/cms/newsletters/
+inject: ''
+buttons:
+  - label: label_i_am_sure_send_now
+    type: submit
+    class: 'default icon-ok-circle'
+  - label: label_cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+---
+
+<fieldset 
+    class="horizontal">
+    <label>
+        {% include patterns/i18n id="label_mailing_lists" %}
+        <select
+            class="pat-autosuggest"
+            multiple 
+            required
+            name="" 
+            id="">
+            {% for item in site.mailing-lists %}
+                {%- unless item.url contains '-state-' -%}
+                    <option 
+                        value="">{{ item.title }}</option>
+                {%- endunless -%}
+            {% endfor %}
+        </select>
+    </label>
+</fieldset>
+
+<article 
+    class="pat-rich">
+	<p>
+        {%- include patterns/i18n id="message_warning_send_news_flash" -%}
+	</p>
+	<p>
+		{%- include patterns/i18n id="message_are_you_sure" -%}
+	</p>
+</article>
+
