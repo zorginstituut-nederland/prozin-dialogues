@@ -1,5 +1,5 @@
 ---
-layout: prozin/landing-image-bank
+layout: prozin/apps/landing-image-bank
 title: Beeldbank
 ---
 
