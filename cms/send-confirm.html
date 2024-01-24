@@ -10,12 +10,29 @@ buttons:
   - label: label_cancel
     type: button
     class: 'close-panel icon-cancel-circle'
+panel_style: panel
+panel_size: medium
 ---
 
 <fieldset 
     class="horizontal">
     {%- include prozin/form-field-mailing-lists.html -%}
 </fieldset>
+
+<div 
+    class="pat-message warning">
+    <p>
+      Let op, de volgende nieuwsartikelen worden niet in de nieuwsflits opgenomen, omdat ze niet gepubliceerd zijn.
+    </p>
+    <ul
+        class="link-list">
+        <li>
+            <a 
+                target="News item"
+                href="/news/2016-05-01-methylfenidaat-lareb">Methylfenidaat en priapisme</a>
+        </li>
+    </ul>
+</div>
 
 <article 
     class="pat-rich">
