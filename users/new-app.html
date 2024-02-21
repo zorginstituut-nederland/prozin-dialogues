@@ -1,0 +1,19 @@
+---
+layout: prozin/modal
+title: label_new_user
+action: /dialogues/users#users
+inject: ''
+buttons:
+  - label: label_save_imp
+    type: submit
+    class: 'default icon-ok-circle close-panel'
+  - label: label_cancel_imp
+    type: button
+    class: 'close-panel icon-cancel-circle'
+panel_class: medium panel
+organisation: Mees & mcRooy Makelaars
+---
+
+{% include prozin/user-edit-form.html
+    context="app"
+    role="Owner" %}
