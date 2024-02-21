@@ -1,0 +1,15 @@
+---
+---
+[
+	{% for item in site.users %}
+		{% if item.layout == 'prozin/profile' %}
+			{% unless item.title == "All users" %}
+				{% unless forloop.first %},{% endunless %}
+				{
+			      "text": "{{ item.email }}",
+			      "id": "{{ item.email | slugify }}"
+			    }	
+			{% endunless %}
+		{% endif %}
+	{% endfor %}
+]
